@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'montserrat';
+    color:#fff;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+#nav{
+    height: 135px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 150px;
+    gap: 40px;
+    position: fixed;
+    z-index: 99;
+}
+#nav img{
+    height: 100px;
+    width: 100px;
+}
+#curser{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: #95c11E;
+    z-index: 99;
+    position: fixed;
+}
+#curser-blur{
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #6e8e1776;
+    filter: blur(30px);
+    z-index: 9;
+}
+#nav h4{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+#main{
+   position: relative; 
+   background-color:rgba(0,0, 0,0.37);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 134px;
+    text-transform: uppercase;
+    font-weight: 900;
+    position: relative;
+}
+#page1 h1::before{
+    content:"EAT. DRINK. PLAY.";
+    position: absolute;
+    color: #000;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke:2px #95c11E;
+    z-index: -1;
+} 
+#page1 h2{
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 10px;
+}
+#page1 p{
+    font-size: 15px;
+    width: 33%;
+    font-weight: 500;
+    text-transform: capitalize;
+    gap: 2px;
+}
+#page2{
+    height: 130vh;
+    width: 100%;
+    z-index: 10;
+}
+#scroll{
+    white-space:nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    z-index: 10;
+    position: relative;
+}
+#scroll::-webkit-scrollbar{
+    display: none;
+}
+#scroll-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroller;
+    animation-duration: 25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll h4{
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 110px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-family: gilroy;
+    -webkit-text-stroke:2px #95c11E;
+    margin-right: 10px;
+    color: transparent;
+    transition: linear 0.4;
+}
+#scroll h4:hover{
+    color: #95c11E;
+}
+@keyframes scroller{
+    from{
+        transform: translateX(0);
+     }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#about-us{
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 30px;
+}
+#about-us img{
+    height: 140px;
+    width: 140px;
+    border-radius: 10%;
+    align-items: cover;
+}
+#about{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#about h3{
+  font-size: 30px;
+  font-weight: 800;
+  padding-bottom: 14px;
+}
+#about p{
+    font-size: 13px;
+    text-transform: capitalize;
+    line-height: 20px;
+    font-weight: 500;
+}
+#cards{
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    z-index: 10;
+
+}
+.card{
+    height: 70%;
+    width: 20%;
+    background-color: blue;
+    border-radius: 20px;
+    background-size: cover;
+    background-position: center;
+}
+#card1{
+    background-image: url(Source/card1.avif);
+}
+#card2{
+    background-image: url(Source/card2.webp);
+}
+#card3{
+    background-image: url(Source/card3.avif);
+}
+.overlay{
+    height:100%;
+    width: 100%;
+    background-color: #95c11E;
+    padding: 15px;
+    padding-top: 100px;
+    text-align: cover;
+    border-radius: 15px;
+    opacity: 0;
+    transition: all ease 0.7s;
+}
+.overlay h4{
+      color: #000;
+      font-size: 25px;
+      text-transform: uppercase;
+      text-wrap: nowrap;
+      margin-bottom:20px ;
+}
+.overlay p{
+    color: #000;
+    font-weight: 400;
+    font-size: 14px;
+}
+.overlay:hover{
+    opacity: 1;
+}
+.card:hover{
+    transform: rotate3d(-1,1,0,20deg);
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+#sign-up{
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to left bottom,#119f3a, #ACE022);
+    margin-bottom: 60px;
+}
+#sign-up h4{
+    color: #000;
+    width: 40%;
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+}
+#sign-up img{
+   height: 100%;
+   object-fit: cover;
+   width: 14%;
+}
+#eat{
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#food{
+    height: 85%;
+    width: 50%;
+    padding-left: 10vw;
+}
+.img1{
+    height: 100%;
+    width: 80%;
+}
+.img1 img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+#drink{
+    height: 80%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+}
+#drink h4{
+   font-size: 35px;
+   font-weight: 800;
+   padding-bottom: 10px;
+}
+#drink p{
+    text-transform: capitalize;
+    font-size: 13px;
+    width: 87%;
+    line-height: 20px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+#drink button{
+    height: 40px;
+    width: 120px;
+    border: solid 3px #95c11E;
+    background-color: #000;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 40px;
+}
+#content{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#content h4{
+    font-size: 20px;
+    width: 50%;
+    text-align: center;
+}
+#content img{
+    height: 60px;
+    position: absolute;
+}
+#content #left{
+    left: 10%;
+   top: 25%;
+}
+#content #right{
+    right: 10%;
+    bottom:25%;
+}
